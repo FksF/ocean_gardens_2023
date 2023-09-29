@@ -1,27 +1,28 @@
-#container {
-  text-align: center;
+@import "./../../scss/variables.scss";
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+* {
+  background-color: #66E6C7;
+  background-image: url('/assets/images/pattern.svg');
+  background-size: cover;
 }
 
-#container strong {
+.title {
+  font-family: $textBase;
   font-size: 20px;
-  line-height: 26px;
+  text-align: center;
+  font-weight: 700;
+  color: #0B3D91;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+.btn-go {
+  --color: #092D69;
+  font-size: 20px;
+  font-weight: 700;
+  height: 58px;
+  --border-color: #FC3D21;
+  --border-style: solid;
+  --border-width: 4px;
+  --background: #FFFFFF;
 }

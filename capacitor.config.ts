@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'ocean_gardens_2023',
+  appId: 'com.fksf.oceangardens',
+  appName: 'Ocean Gardens',
   webDir: 'www',
   server: {
     androidScheme: 'https'
