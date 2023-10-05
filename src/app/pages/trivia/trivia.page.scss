@@ -1,0 +1,25 @@
+@import "./../../../scss/variables.scss";
+
+ion-content {
+  --background: #0B3D91;
+}
+
+.cntQuestion {
+  background-color: white;
+  border-radius: 0 0 40px 40px;
+  color: #0B3D91;
+  padding: 30px;
+  h2 {
+    font-family: $textBase;
+    font-weight: 700;
+    font-size: 20px;
+  }
+  ion-progress-bar {
+    height: 17px;
+    border-radius: 10px;
+  }
+}
+
+.cntAlternatives {
+  padding: 30px;
+}

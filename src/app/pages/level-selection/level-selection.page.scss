@@ -1,0 +1,63 @@
+@import "./../../../scss/variables.scss";
+
+* {
+  background-image: url('/assets/images/oceanbg.svg');
+  background-size: cover;
+}
+
+.cntTitle {
+  padding: 2rem;
+  background: #6153FF;
+  border: 2px dashed white;
+  border-radius: 20px;
+  .title {
+    font-family: $textBase;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 900;
+    color: #FFFFFF;
+    background: transparent;
+    margin: 0;
+  }
+}
+
+.btn-go {
+  --color: #FFFFFF;
+  background-color: #3F379C;
+  font-size: 20px;
+  font-weight: 700;
+  --height: 44px;
+  border-radius: 10px;
+  --background: #6153FF;
+  --box-shadow: 0px 10px 0px 0px #FC3D21;
+  box-shadow: 0px 10px 0px 0px #FC3D21;
+  -webkit-box-shadow: 0px 10px 0px 0px #FC3D21;
+  -moz-box-shadow: 0px 10px 0px 0px #FC3D21;
+  --background-activated: #7068cbd8;
+  max-width: 222px;
+  ion-img {
+    background-color: #6153FF;
+    margin-right: 5px;
+    height: 33px;
+    border-radius: 10px;
+    background: #6153FF;
+  }
+}
+
+.card {
+  max-width: 135px;
+  border-radius: 15px;
+  img {
+    min-height: 120px;
+  }
+  ion-card-header {
+    padding: 0;
+    ion-card-title {
+      padding: 5px 0;
+      background: #3F379C;
+      color: white;
+      font-size: 14px;
+      font-family: $textBase2;
+    }
+  }
+}

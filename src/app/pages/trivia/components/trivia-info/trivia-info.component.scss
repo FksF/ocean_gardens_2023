@@ -1,0 +1,58 @@
+@import "./../../../../../scss/variables.scss";
+
+ion-content {
+  --background: #66E6C7;
+}
+
+.title {
+  font-family: $textBase;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 900;
+  color: #FFFFFF;
+  background: transparent;
+  margin: 0;
+}
+
+.cntDetail {
+  background-color: white;
+  border-radius: 50px 50px 0 0;
+  h1 {
+    color: #0B3D91;
+    font-family: $textBase;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  p {
+    color: #6D7274;
+    font-size: 18px;
+    font-family: $textBase;
+    text-align: justify;
+    max-height: 224px;
+    overflow: auto;
+  }
+}
+
+.btn-go {
+  --color: #FFFFFF;
+  background-color: #3F379C;
+  font-size: 20px;
+  font-weight: 700;
+  --height: 44px;
+  border-radius: 10px;
+  --background: #6153FF;
+  --box-shadow: 0px 10px 0px 0px #FC3D21;
+  box-shadow: 0px 10px 0px 0px #FC3D21;
+  -webkit-box-shadow: 0px 10px 0px 0px #FC3D21;
+  -moz-box-shadow: 0px 10px 0px 0px #FC3D21;
+  --background-activated: #7068cbd8;
+  max-width: 222px;
+  ion-img {
+    background-color: #6153FF;
+    margin-right: 5px;
+    height: 33px;
+    border-radius: 10px;
+    background: #6153FF;
+  }
+}

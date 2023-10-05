@@ -1,0 +1,27 @@
+<ion-content [fullscreen]="true">
+  <div class="d-flex flex-column justify-content-center align-items-center h-100 px-5">
+    <h1 class="title">Ocean Gardens</h1>
+    <div class="cntUsername p-4 mt-3">
+      <ion-input
+        aria-label="TU APODO"
+        placeholder="TU APODO"
+        class="custom w-100"
+        helperText="Máximo 8 caractéres"
+        [counter]="true"
+        [maxlength]="8"
+      ></ion-input>
+      <ion-button 
+        class="btn-go mt-3 w-100"
+        strong="true"
+        size="small"
+        routerLink="/level-selection"
+      >
+        <ion-img 
+          slot="start"
+          src="./../../../assets/images/icons/playIcon.svg"
+        ></ion-img>
+        INGRESAR
+      </ion-button>
+    </div>
+  </div>
+</ion-content>
