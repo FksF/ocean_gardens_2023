@@ -9,14 +9,11 @@ import { TriviaService } from 'src/app/pages/trivia/trivia.service';
   styleUrls: ['./trivia.page.scss'],
 })
 export class TriviaPage implements OnInit {
-  pseudo: string = '';
   difficulty: string = ""
-  sauvegarder: boolean = false;
   questions = [];
   currentQuestion: any;
   numeroQuestion = 0;
   points: number = 0;
-  beginGame: boolean = false;
   nextQuestion: boolean = false;
   endGame: boolean = false;
   infoView: boolean = true;
