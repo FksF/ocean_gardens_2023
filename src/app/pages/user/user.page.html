@@ -9,12 +9,14 @@
         helperText="Máximo 8 caractéres"
         [counter]="true"
         [maxlength]="8"
+        [(ngModel)]="username"
+        name="username"
       ></ion-input>
       <ion-button 
         class="btn-go mt-3 w-100"
         strong="true"
         size="small"
-        routerLink="/level-selection"
+        (click)="saveUsername()"
       >
         <ion-img 
           slot="start"

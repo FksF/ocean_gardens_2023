@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-trivia-info',
@@ -7,8 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TriviaInfoComponent  implements OnInit {
 
+  @Input() title: string = '';
+  @Input() info: string = '';
+  @Input() url: string = '';
+  @Output() questionsView = new EventEmitter<boolean>();
   constructor() { }
 
   ngOnInit() {}
 
+  goToQuestions() {
+    this.questionsView.emit(false);
+  }
 }

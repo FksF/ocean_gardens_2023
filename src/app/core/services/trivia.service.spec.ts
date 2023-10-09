@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { TriviaService } from './trivia.service';
+import { TriviaService } from '../../pages/trivia/trivia.service';
 
 describe('TriviaService', () => {
   let service: TriviaService;

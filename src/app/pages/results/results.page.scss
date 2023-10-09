@@ -1,0 +1,44 @@
+@import "./../../../scss/variables.scss";
+
+* {
+  background-color: #007AFF;
+  background-size: cover;
+}
+
+.cntResult {
+  background-color: white;
+  border-radius: 40px;
+  width: 100%;
+  color: black;
+}
+
+.btn-go {
+  --color: #092D69;
+  background-color: #3F379C;
+  font-size: 20px;
+  font-weight: 700;
+  --height: 44px;
+  border-radius: 10px;
+  --background: #FFFFFF;
+  --box-shadow: 0px 10px 0px 0px #FC3D21;
+  box-shadow: 0px 10px 0px 0px #FC3D21;
+  -webkit-box-shadow: 0px 10px 0px 0px #FC3D21;
+  -moz-box-shadow: 0px 10px 0px 0px #FC3D21;
+  --background-activated: #e1e1e1;
+  ion-img {
+    background-color: white;
+    margin-right: 5px;
+    height: 33px;
+    border-radius: 10px;
+  }
+}
+
+.btnExit {
+  background: transparent;
+  --background: white;
+  color: black;
+  font-weight: bold;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}

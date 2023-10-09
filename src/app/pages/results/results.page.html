@@ -1,0 +1,32 @@
+<ion-content [fullscreen]="true">
+  <div class="d-flex flex-column justify-content-center align-items-center h-100 px-5">
+    <ion-button class="btnExit" (click)="goToUser()" size="small" shape="round">
+      SALIR
+    </ion-button>
+    <div class="cntResult">
+      <div class="p-5 bg-transparent">
+        <ion-img 
+        slot="start"
+        src="./../../../assets/images/child.svg"
+        ></ion-img>
+      </div>
+      <h1 class="text-center bg-transparent c-black">Felicitaciones!</h1>
+      <div class="text-center bg-transparent py-5">
+        <h2 class="bg-transparent">Correctas:</h2>
+        <h1 class="bg-transparent">{{points}}</h1>
+      </div>
+    </div>
+    <ion-button 
+      class="btn-go mt-3 w-100"
+      strong="true"
+      size="small"
+      routerLink="/level-selection"
+    >
+      <ion-img 
+        slot="start"
+        src="./../../../assets/images/icons/playIcon.svg"
+      ></ion-img>
+      NIVELES
+    </ion-button>
+  </div>
+</ion-content>

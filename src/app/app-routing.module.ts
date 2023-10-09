@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'trivia',
     loadChildren: () => import('./pages/trivia/trivia.module').then( m => m.TriviaPageModule)
   },
+  {
+    path: 'results',
+    loadChildren: () => import('./pages/results/results.module').then( m => m.ResultsPageModule)
+  },
 ];
 
 @NgModule({

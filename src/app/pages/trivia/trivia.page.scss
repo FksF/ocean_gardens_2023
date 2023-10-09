@@ -1,7 +1,7 @@
 @import "./../../../scss/variables.scss";
 
 ion-content {
-  --background: #0B3D91;
+  --background: #007AFF;
 }
 
 .cntQuestion {
@@ -27,6 +27,8 @@ ion-content {
     border: 2px solid white;
     border-radius: 40px;
     padding: 0 1rem;
+    min-width: 100%;
+    margin: 1rem 0;
     ion-label {
       white-space: initial;
     }
@@ -49,6 +51,7 @@ ion-content {
   max-width: 222px;
   position: absolute;
   bottom: 25px;
+  z-index: 9999;
   ion-img {
     background-color: #ffffff;
     margin-right: 5px;
@@ -56,4 +59,16 @@ ion-content {
     border-radius: 10px;
     background: #ffffff;
   }
+}
+
+.correct {
+  background:  	#3ECF45;
+}
+
+.incorrect {
+  background: #FC3D21;
+}
+
+.unknown {
+  background: transparent;
 }

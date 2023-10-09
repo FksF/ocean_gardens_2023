@@ -1,31 +1,41 @@
 <ion-content [fullscreen]="true">
-  <app-trivia-info *ngIf="false"></app-trivia-info>
-  <div>
+  <app-trivia-info (questionsView)="changeViewStatus($event)" [title]="title" [info]="info" [url]="url" *ngIf="infoView"></app-trivia-info>
+  <div *ngIf="!infoView">
     <div class="cntQuestion">
       <h2 class="text-center my-3">Basico</h2>
-      <h2>Pregunta 1/5</h2>
-      <ion-progress-bar type="determinate" value="0.20" color="primary"></ion-progress-bar>
-      <h2 class="mt-4">1.Lorem Ipsum is simply dummy text of the printing ?</h2>
+      <h2>Pregunta {{numeroQuestion + 1}}/{{questions.length}}</h2>
+      <ion-progress-bar
+        type="determinate"
+        [value]="calcProgress()"
+        color="primary"
+      ></ion-progress-bar>
+      <h2 class="mt-4">{{currentQuestion?.question}}</h2>
     </div>
     <div class="cntAlternatives">
-      <div>
-        <ion-radio class="" value="ford" mode="md" label-placement="end">
-          <ion-label>
-            rthrthrthrthrthertherthjertyjertjertjertjertj ergerge ergerger gergerg
+      <div *ngFor="let answer of currentQuestion?.answers">
+        <ion-radio value="" alignment="center" mode="md" label-placement="end" [ngClass]="{
+          'correct': nextQuestion && answer === currentQuestion.correct_answer, 
+          'incorrect': nextQuestion && answer != currentQuestion.correct_answer, 
+          'unknown': !nextQuestion}" (click)="checkanswer(answer)" [disabled]="disabledQuestion">
+          <ion-label class="text-center">
+            {{ answer }}
           </ion-label>
         </ion-radio>
       </div>
       <div class="d-flex justify-content-center">
-        <ion-button 
-          class="btn-go mt-3 w-100"
-          strong="true"
-          size="small"
-        >
-          <ion-img 
+        <ion-button class="btn-go mt-3 w-100" strong="true" size="small" *ngIf="nextQuestion && !endGame" (click)="goToNextQuestion()">
+          <ion-img
             slot="start"
             src="./../../../assets/images/icons/playIcon.svg"
           ></ion-img>
           SIGUIENTE
+        </ion-button>
+        <ion-button class="btn-go mt-3 w-100" strong="true" size="small" *ngIf="nextQuestion && endGame"(click)="goToScore()">
+          <ion-img
+            slot="start"
+            src="./../../../assets/images/icons/playIcon.svg"
+          ></ion-img>
+          PUNTAJE
         </ion-button>
       </div>
     </div>

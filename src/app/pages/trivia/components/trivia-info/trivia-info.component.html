@@ -1,19 +1,18 @@
 <ion-content [fullscreen]="true">
 
   <div class="h-50 p-5">
-    <h1 class="title mb-4">Title</h1>
+    <h1 class="title mb-4">{{title}}</h1>
     <div class="d-flex justify-content-center">
-      <ion-img src="/assets/images/imgDemoInfo.svg"></ion-img>
+      <ion-img [src]="url"></ion-img>
     </div>
   </div>
 
   <div class="h-50 cntDetail p-5">
 
     <div class="">
-      <h1 class="">Informacion basica</h1>
+      <h1 class="">Información básica</h1>
       <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        {{info}}
       </p>
     </div>
     <div class="text-center">
@@ -21,6 +20,7 @@
         class="btn-go mt-3 w-100"
         strong="true"
         size="small"
+        (click)="goToQuestions()"
       >
         <ion-img 
           slot="start"

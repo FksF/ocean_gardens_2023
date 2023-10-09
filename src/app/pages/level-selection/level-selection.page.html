@@ -2,11 +2,11 @@
   <div class="d-flex flex-column justify-content-center align-items-center h-100 px-5">
 
     <div class="cntTitle">
-      <h1 class="title">ESCOGE TU NIVEL</h1>
+      <h1 class="title">ESCOGE TU NIVEL {{username}}</h1>
     </div>
     <div class="mt-4" style="background: transparent;">
       <div class="bg-transparent d-flex justify-content-center" style="background: transparent;">
-        <ion-card class="card">
+        <ion-card class="card" (click)="selectDifficulty('easy')">
           <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
           <ion-card-header style="text-align: center;">
             <ion-card-title>BÁSICO</ion-card-title>
@@ -14,13 +14,13 @@
         </ion-card>
       </div>
       <div class="bg-transparent d-flex" style="background: transparent;">
-        <ion-card class="card">
+        <ion-card class="card" (click)="selectDifficulty('medium')">
           <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
           <ion-card-header style="text-align: center;">
             <ion-card-title>INTERMEDIO</ion-card-title>
           </ion-card-header>
         </ion-card>
-        <ion-card class="card">
+        <ion-card class="card" (click)="selectDifficulty('hard')">
           <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
           <ion-card-header style="text-align: center;">
             <ion-card-title>AVANZADO</ion-card-title>

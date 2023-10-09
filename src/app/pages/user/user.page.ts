@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserPage implements OnInit {
 
-  constructor() { }
+  username: string = '';
+  constructor(
+    private router: Router,
+  ) { }
 
   ngOnInit() {
+    localStorage.clear();
+  }
+
+  saveUsername() {
+    console.log(this.username);
+    localStorage.setItem('username', this.username);
+    this.router.navigate(['/level-selection']);
   }
 
 }
